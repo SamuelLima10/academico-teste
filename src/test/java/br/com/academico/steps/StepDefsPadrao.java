@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.junit.runners.model.InitializationError;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import br.com.academico.runner.TestRunnerAcademico;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
@@ -28,11 +27,10 @@ public class StepDefsPadrao extends Steps {
 	@After
 	public void finalizarTestes(Scenario scenario) throws InitializationError,
 			IOException {
-		driver.quit();
 		if (scenario.isFailed()) {
 			System.out.println("Deu erro no cenario: " + scenario.getName());
-			TestRunnerAcademico.retornarStepComErro();
 		}
+		driver.quit();
 
 	}
 }
