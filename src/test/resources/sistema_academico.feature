@@ -14,7 +14,7 @@ Scenario: Aluno reprovado por nota
 		|Nota1|Nota2|Nota3| 
 		|3.0  |3.0  |3.0  |	
 	And Clico no botão "Calcular"
-	Then Deve ser exibido a mensagem "Reprovado"
+	Then Deve ser exibido a mensagem "AReprovado"
 
 Scenario: Aluno aprovado
 	Given Estou acessando o sistema academico
