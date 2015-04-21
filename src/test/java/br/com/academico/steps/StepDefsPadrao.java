@@ -3,6 +3,7 @@ package br.com.academico.steps;
 import java.io.IOException;
 
 import org.junit.runners.model.InitializationError;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.Scenario;
@@ -28,7 +29,8 @@ public class StepDefsPadrao extends Steps {
 	public void finalizarTestes(Scenario scenario) throws InitializationError,
 			IOException {
 		if (scenario.isFailed()) {
-			System.out.println("Deu erro no cenario: " + scenario.getName());
+			byte[] screenshot =((FirefoxDriver) driver).getScreenshotAs(OutputType.BYTES);
+			scenario.embed(screenshot, "image/png");
 		}
 		driver.quit();
 
