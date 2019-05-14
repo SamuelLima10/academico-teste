@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Wait;
 
 import br.com.academico.config.WebDriverFactory;
 
+
 public class BaseTest {
 
 	protected static WebDriver driver;

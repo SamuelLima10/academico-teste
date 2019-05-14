@@ -1,10 +1,10 @@
 package br.com.academico.test;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 import br.com.academico.page.PageLancamentoNotas;
-import static org.junit.Assert.assertEquals;
-
 public class LancamentoNotasTest extends BaseTest{
 
 	
