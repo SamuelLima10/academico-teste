@@ -18,7 +18,7 @@ public class WebDriverFactory {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		return driver;
-	}//
+	}
 
 	public Wait<WebDriver> createWebDriverWait(WebDriver driver) {
 		return createWait(driver, 10, 100);
